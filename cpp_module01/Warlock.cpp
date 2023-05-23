@@ -6,7 +6,7 @@
 /*   By: segarcia <segarcia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 07:59:25 by segarcia          #+#    #+#             */
-/*   Updated: 2023/05/22 10:18:15 by segarcia         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:21:39 by segarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Warlock::learnSpell(ASpell *spell) {
   }
 }
 
-void Warlock::forgetSpell(std::string const &name) {
+void Warlock::forgetSpell(std::string name) {
   std::vector<ASpell *>::iterator ite = this->spells.end();
   for (std::vector<ASpell *>::iterator it = this->spells.begin(); it != ite;
        ++it) {
@@ -60,7 +60,7 @@ void Warlock::forgetSpell(std::string const &name) {
   }
 }
 
-void Warlock::launchSpell(std::string const &name, const ATarget &target) {
+void Warlock::launchSpell(std::string name, const ATarget &target) {
   std::vector<ASpell *>::iterator ite = this->spells.end();
   for (std::vector<ASpell *>::iterator it = this->spells.begin(); it != ite;
        ++it) {

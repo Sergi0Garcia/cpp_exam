@@ -6,7 +6,7 @@
 /*   By: segarcia <segarcia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 07:51:05 by segarcia          #+#    #+#             */
-/*   Updated: 2023/05/22 10:25:33 by segarcia         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:21:30 by segarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ public:
   void introduce() const;
 
   void learnSpell(ASpell *spell);
-  void forgetSpell(std::string const &name);
-  void launchSpell(std::string const &name, const ATarget &target);
+  void forgetSpell(std::string name);
+  void launchSpell(std::string name, const ATarget &target);
 
 private:
   std::string _name;
