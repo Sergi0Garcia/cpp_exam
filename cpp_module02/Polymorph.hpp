@@ -2,10 +2,10 @@
 #include "ASpell.hpp"
 #include <iostream>
 
-class Fwoosh : public ASpell {
+class Polymorph : public ASpell {
 public:
-  Fwoosh();
-  ~Fwoosh();
+  Polymorph();
+  ~Polymorph();
 
   virtual ASpell *clone(void) const;
 };

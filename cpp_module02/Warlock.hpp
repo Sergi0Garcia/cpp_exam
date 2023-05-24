@@ -1,6 +1,7 @@
 #pragma once
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+#include "SpellBook.hpp"
 #include <iostream>
 #include <vector>
 
@@ -8,7 +9,7 @@ class Warlock {
 private:
   std::string _name;
   std::string _title;
-  std::vector<ASpell *> _arr;
+  SpellBook spell_book;
 
   Warlock();
   Warlock(const Warlock &other);

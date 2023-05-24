@@ -1,5 +1,10 @@
 #include "Warlock.hpp"
+#include "ASpell.hpp"
+#include <algorithm>
 #include <string>
+#include <sys/_types/_size_t.h>
+#include <type_traits>
+#include <vector>
 
 Warlock::Warlock(const std::string &name, const std::string &title)
     : _name(name), _title(title) {
@@ -30,3 +35,14 @@ void Warlock::introduce(void) const {
 }
 
 void Warlock::setTitle(const std::string &title) { _title = title; }
+
+void Warlock::learnSpell(ASpell *spell) { spell_book.learnSpell(spell); }
+
+void Warlock::forgetSpell(std::string name) { spell_book.forgetSpell(name); }
+
+void Warlock::launchSpell(std::string name, const ATarget &target) {
+  ASpell *tmp = spell_book.createSpell(name);
+  if (tmp) {
+    tmp->launch(target);
+  }
+}
